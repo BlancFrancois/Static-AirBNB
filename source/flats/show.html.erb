@@ -1,0 +1,47 @@
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="banner" style="background-image: url('<%= image_path flat.picture %>');"></div>
+
+<div class="wrapper-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-1">
+        <div class="header-details-flat">
+          <div>
+            <%= image_tag flat.owner_picture, class: "avatar-large" %>
+            <p><%= flat.owner_name %></p>
+          </div>
+          <div>
+            <h3><%= flat.summary %></h3>
+            <p><%= flat.city %></p>
+            <ul class="list-inline">
+              <% flat.flat_rating.times do %>
+                <i class="fa fa-star" style="color: #ffb400"></i>
+              <% end %>
+
+              <% (5 - flat.flat_rating).times do %>
+                <i class="fa fa-star" style="color: #cacccd"></i>
+              <% end %>
+            </ul>
+          </div>
+         </div>
+      </div>
+      <div class ="col-xs-12 col-sm-4">
+        <form action="#" class="form-vertical">
+          <input type="text" class="form-control" placeholder="checkin">
+          <input type="text" class="form-control" placeholder="checkout">
+          <select name="" id="" class="form-control">
+            <option value="1">1 person</option>
+            <option value="2">2 persons</option>
+            <option value="3">3 persons</option>
+          </select>
+          <input type="submit" class="btn btn-primary" value="Search">
+        </form>
+      </div>
+     </div>
+    </div>
+   </div>
+  </
+</div>
+
